@@ -3,50 +3,50 @@
 /* Typography */
 @font-face {
   font-family: 'Eurostile';
-  src: url('fonts/Eurostile-Black.otf') format('opentype');
+  src: url('../fonts/Eurostile-Black.otf') format('opentype');
   font-weight: 800;
 }
 @font-face {
   font-family: 'Eurostile';
-  src: url('fonts/Eurostile-BlackItalic.otf') format('opentype');
+  src: url('../fonts/Eurostile-BlackItalic.otf') format('opentype');
   font-weight: 800;
   font-style: italic;
 }
 @font-face {
   font-family: 'Eurostile';
-  src: url('fonts/Eurostile-Bold.otf') format('opentype');
+  src: url('../fonts/Eurostile-Bold.otf') format('opentype');
   font-weight: 700;
 }
 @font-face {
   font-family: 'Museo Sans';
-  src: url('fonts/MuseoSans-700.otf') format('opentype');
+  src: url('../fonts/MuseoSans-700.otf') format('opentype');
   font-weight: 700;
 }
 @font-face {
   font-family: 'Museo Sans';
-  src: url('fonts/MuseoSans-700italic.otf') format('opentype');
+  src: url('../fonts/MuseoSans-700italic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
 }
 @font-face {
   font-family: 'Museo Sans';
-  src: url('fonts/MuseoSans-500.otf') format('opentype');
+  src: url('../fonts/MuseoSans-500.otf') format('opentype');
   font-weight: 500;
 }
 @font-face {
   font-family: 'Museo Sans';
-  src: url('fonts/MuseoSans-500italic.otf') format('opentype');
+  src: url('../fonts/MuseoSans-500italic.otf') format('opentype');
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
   font-family: 'Museo Sans';
-  src: url('fonts/MuseoSans-300.otf') format('opentype');
+  src: url('../fonts/MuseoSans-300.otf') format('opentype');
   font-weight: 300;
 }
 @font-face {
   font-family: 'Museo Sans';
-  src: url('fonts/MuseoSans-300italic.otf') format('opentype');
+  src: url('../fonts/MuseoSans-300italic.otf') format('opentype');
   font-weight: 300;
   font-style: italic;
 }
@@ -177,17 +177,36 @@ h3 {
   font-weight: 600;
 }
 /* Button */
-btn,
-.btn-primary {
+.btn {
   margin-top: 1em;
-  background-color: #2fa0d6;
-  border: none;
   width: 100%;
   font-weight: 600;
   font-size: .8rem;
   line-height: 2em;
   text-transform: uppercase;
   border-radius: 0;
+}
+.btn-primary {
+  color: white;
+  background: #2fa0d6;
+  border: none;
+}
+.btn-primary:hover {
+  color: white;
+  background: #2382af;
+}
+.btn-secondary {
+  color: white;
+  background: #99999a;
+  border: none;
+}
+.btn-secondary:hover {
+  color: white;
+  background: #7f7f81;
+}
+#end-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 /* Nav */
 .navbar,
@@ -268,7 +287,8 @@ btn,
 @media (min-width: 576px) {
   /* Button */
   btn,
-  .btn-primary {
+  .btn-primary,
+  .btn-secondary {
     width: auto;
   }
 }

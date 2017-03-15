@@ -14,58 +14,58 @@
 /* Typography */
 @font-face {
     font-family: 'Eurostile';
-    src: url('fonts/Eurostile-Black.otf') format('opentype');
+    src: url('../fonts/Eurostile-Black.otf') format('opentype');
     font-weight: 800;
 }
 
 @font-face {
     font-family: 'Eurostile';
-    src: url('fonts/Eurostile-BlackItalic.otf') format('opentype');
+    src: url('../fonts/Eurostile-BlackItalic.otf') format('opentype');
     font-weight: 800;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Eurostile';
-    src: url('fonts/Eurostile-Bold.otf') format('opentype');
+    src: url('../fonts/Eurostile-Bold.otf') format('opentype');
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Museo Sans';
-    src: url('fonts/MuseoSans-700.otf') format('opentype');
+    src: url('../fonts/MuseoSans-700.otf') format('opentype');
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Museo Sans';
-    src: url('fonts/MuseoSans-700italic.otf') format('opentype');
+    src: url('../fonts/MuseoSans-700italic.otf') format('opentype');
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Museo Sans';
-    src: url('fonts/MuseoSans-500.otf') format('opentype');
+    src: url('../fonts/MuseoSans-500.otf') format('opentype');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Museo Sans';
-    src: url('fonts/MuseoSans-500italic.otf') format('opentype');
+    src: url('../fonts/MuseoSans-500italic.otf') format('opentype');
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Museo Sans';
-    src: url('fonts/MuseoSans-300.otf') format('opentype');
+    src: url('../fonts/MuseoSans-300.otf') format('opentype');
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'Museo Sans';
-    src: url('fonts/MuseoSans-300italic.otf') format('opentype');
+    src: url('../fonts/MuseoSans-300italic.otf') format('opentype');
     font-weight: 300;
     font-style: italic;
 }
@@ -176,14 +176,14 @@
 
 
 
-///////////* BASIC STYLE - DO NOT CHANGE *///////////////
+///////////* MAIN STYLE - DO NOT CHANGE *///////////////
 
 @bsm-gray1: #272727;
 @bsm-gray2: #99999a;
 @bsm-gray3: #efeeee;
 @bsm-blue: #2fa0d6;
 
-////////* BASE */////////////////////
+////////* GlOBAL */////////////////////
 
 body {
     font-family: Open Sans, sans-serif;
@@ -221,16 +221,38 @@ h3 {
 }
 
 /* Button */
-btn, .btn-primary {
+.btn {
     margin-top: 1em;
-    background-color: @bsm-blue;
-    border: none;
     width: 100%;
     font-weight: 600;
     font-size: .8rem;
     line-height: 2em;
     text-transform: uppercase;
     border-radius: 0;
+}
+.btn-primary {
+    color: white;
+    background: @bsm-blue;
+    border: none;
+    &:hover {
+        color: white;
+        background: darken(@bsm-blue, 10%);
+    }
+}
+
+.btn-secondary {
+    color: white;
+    background: @bsm-gray2;
+    border: none;
+    &:hover {
+        color: white;
+        background: darken(@bsm-gray2, 10%);
+    }
+}
+
+#end-buttons {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Nav */
@@ -277,16 +299,16 @@ btn, .btn-primary {
     }
 } 
 
-////* Base - Small screen *//////
+////* Global - Small screen *//////
 @media (min-width: 576px) {
     /* Button */
-    btn, .btn-primary {
+    btn, .btn-primary, .btn-secondary {
     width: auto; 
     }
 }
-////* End of  Base Small screen *////
+////* End of Small screen *////
 
-////* Base - Large screen*///////
+////* Global - Large screen*///////
 
 @media (min-width: 992px) {
     body {
@@ -333,8 +355,8 @@ btn, .btn-primary {
         }
     }    
 }
-////* End of Base - Large screen *//////
-////////* END OF BASE *///////////////////////////
+////* End of global - Large screen *//////
+////////* END OF GLOBAL *////////////////////////
 
 ////////* COLORS.HTML *//////////////////////////
 
@@ -412,6 +434,7 @@ btn, .btn-primary {
     margin-bottom: .5rem; 
 }
 ////////* END OF TYPOGRAPHY.HTML *//////////////
+
 ////////* BUTTONS.HTML *//////////////////////
 
 .buttons {
